@@ -20,12 +20,32 @@ public class Quadratic {
 		double[] roots = {
 				(-1*b+Math.sqrt(discriminant()))/(2*a),
 				(-1*b-Math.sqrt(discriminant()))/(2*a)
-		}
+		};
 		return roots;
 			
 }
 
-	public static double discriminant() {
-		return b * b - 4 * a * c;
+	private  double discriminant() {
+		return Math.pow(this.b, 2) - (4 * this.a * this.c);
+	}
+	
+	
+	//Creates a String of the equation, ensuring the appropriate signage is used
+	public String toString() {
+	String result = "";
+	
+	if(Math.signum(a)==-1)
+		result = "-";
+	result = result + a + "x^2"; 
+	
+	if(Math.signum(b)==1)
+		result = result + " + ";
+	result = result + b  + "x ";
+	
+	if(Math.signum(c)==1)
+		result = result + "+ ";
+	result = result + c;
+	
+	return result;
 	}
 }
