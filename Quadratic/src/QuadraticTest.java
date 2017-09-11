@@ -1,6 +1,13 @@
 
+/**
+ * @author gibbonss
+ *
+ */
 public class QuadraticTest {
 
+	/**
+	 * Tests the Quadratic class and some of its main methods
+	 */
 	public static void test() {
 		// tests the Quadratic.function method
 
@@ -20,7 +27,7 @@ public class QuadraticTest {
 			System.out.printf("%.2f, ", x);
 		System.out.println("\nThe expected result is 0.33, -6.0\n");
 
-		// Test2 the roots should be 0.71 and -1.5
+		// Test3 the roots should be 0.71 and -1.5
 		Quadratic q3 = new Quadratic(14, 11, -15);
 		double[] q3Roots = q3.findRoots();
 		System.out.println("The roots of equation " + q3 + " are: ");
